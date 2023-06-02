@@ -208,7 +208,7 @@ void showLeaderboard(){
   }
   sortLeaderboard();
   for(int i = 0; i < playersLength; i++){
-    cout<<i+1<<". "<<players[i].name<<" dengan skor "<<players[i].score<<endl;
+    cout<<i+1<<". "<<players[i].name<<" dengan skor "<<players[i].score<<endl<<endl;
   }
 }
 
@@ -375,7 +375,12 @@ int main(){
     goto mainMenu;
   } else if(pilihan == 1){
     system("cls");
-    cout<<"aturan ...";
+    cout<<"         ====> Cara Main <====\n\n";
+    cout<<"1. Tekan a / d untuk bergerak kiri / kanan.\n\n";
+    cout<<"2. Tekan j untuk menembak.\n\n";
+    cout<<"3. Tembak angka yang memiliki minimal 3 kembaran.\n\n";
+    cout<<"4. Setiap tembakan angka random akan muncul satu.\n\n";
+    cout<<"5. Jangan sampai angka menyentuh garis.\n\n";
     getch();
     goto mainMenu;
   } else if(pilihan == 2){
@@ -385,6 +390,19 @@ int main(){
     goto mainMenu;
   } else if(pilihan == 3){
     system("cls");
-    return 0;
+    cout<<"===========================\n";
+    cout<<"==                       ==\n";
+    cout<<"==  Ingin Keluar ? (Y/N) ==\n";
+    cout<<"==                       ==\n";
+    cout<<"===========================\n\n";
+    confirm:
+    char exit = getch();
+    if(exit == 'y' || exit == 'Y'){
+      return 0;
+    } else if(exit == 'n' || exit == 'N'){
+      goto mainMenu;
+    } else {
+      goto confirm;
+    }
   }
 }
