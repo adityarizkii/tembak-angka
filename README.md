@@ -1,3 +1,3 @@
 # tembak-angka
 
-ini adalah project c++ pertama saya
+tembak, tembak apa yang seru?
